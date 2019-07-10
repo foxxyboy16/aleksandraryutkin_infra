@@ -1,5 +1,5 @@
-# aleksandraryutkin_infra
-Homework-3 Cloud-bastion
+# Homework-3 Знакомство с облачной инфраструктурой. Google Cloud Platform
+
 В GCP создаются 2 ВМ - bastion c внешним и внутренним ip, someinternalhost только с внутренним ip
 Подключение к bastion, используя в параметрах подключения ключ -A, чтобы явно включить SSH Agent
 Forwarding
