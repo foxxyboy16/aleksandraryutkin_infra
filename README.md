@@ -35,7 +35,7 @@ gcloud compute instances create reddit-app \
 
 ## Данные для подключения
 
-testapp_IP = 34.77.35.9
+testapp_IP = 35.241.245.45
 testapp_port = 9292
 
 ## Создание скриптов для установки Ruby, MongoDB и деплой приложения
