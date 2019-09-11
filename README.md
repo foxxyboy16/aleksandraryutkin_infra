@@ -19,27 +19,27 @@ someinternalhost_IP = 10.132.0.3
 
 ## Перенос файлов `setupvpn.sh` и `cloud-bastion.ovpn` в директорию /VPN
 
-```mkdir VPN
+mkdir VPN
 git mv setupvpn.sh VPN
-git mv cloud-bastion.ovpn VPN```
+git mv cloud-bastion.ovpn VPN
 
 ## Создается новый инстанс
 
-```gcloud compute instances create reddit-app \
+gcloud compute instances create reddit-app \
 --boot-disk-size=10GB \
 --image-family ubuntu-1604-lts \
 --image-project=ubuntu-os-cloud \
 --machine-type=g1-small \
 --tags puma-server \
---restart-on-failure```
+--restart-on-failure
 
 ## Данные для подключения
 
-```testapp_IP = 35.241.245.45
-testapp_port = 9292```
+testapp_IP = 34.77.35.9
+testapp_port = 9292
 
 ## Создание скриптов для установки Ruby, MongoDB и деплой приложения
 
-```install_ruby.sh
+install_ruby.sh
 install_mongodb.sh
-deploy.sh```
+deploy.sh
