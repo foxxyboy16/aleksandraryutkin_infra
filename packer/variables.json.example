@@ -1,4 +1,5 @@
 {
     "project_id": "inf-322",
-    "source_image_family": "ubuntu-2156"
+    "source_image_family": "ubuntu-2156",
+    "machine_type": "f1-micro"
 }
