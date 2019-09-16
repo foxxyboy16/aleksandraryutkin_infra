@@ -1,4 +1,4 @@
 project = "infra-12345"
 public_key_path = "~/.ssh/authorized_keys"
 disk_image = "reddit-base"
-private_key_path = "~/.ssh/id_rsa"
+private_key_path = "~/.ssh/authorized_keys"
