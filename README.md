@@ -171,7 +171,7 @@ https://blog.gruntwork.io/installing-multiple-versions-of-terraform-with-homebre
 Убедиться, что бакеты создались и доступны  
 
 
-# Homework-7 Управление конфигурацией. Основные DevOps инструменты. Знакомство с Ansible  
+# Homework-8 Управление конфигурацией. Основные DevOps инструменты. Знакомство с Ansible  
 
 ## Установка Ansible
 
@@ -214,13 +214,13 @@ https://blog.gruntwork.io/installing-multiple-versions-of-terraform-with-homebre
 Зафиксировать разницу выполнения команд  
 Написать простой playbook по копированию репозитория  reddit.
 
-- name: Clone  
-  hosts: app  
-  tasks:  
-    - name: Clone repo  
-      git:  
-      repo: https://github.com/express42/reddit.git  
-      dest: /home/appuser/reddit  
+`- name: Clone`
+  `hosts: app`  
+  `tasks:`  
+    `- name: Clone repo`  
+      `git:`  
+      `repo: https://github.com/express42/reddit.git`  
+      `dest: /home/appuser/reddit`
 
 Выполнить
 
