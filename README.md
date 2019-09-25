@@ -169,3 +169,62 @@ https://blog.gruntwork.io/installing-multiple-versions-of-terraform-with-homebre
 Создать в директории terraform конфигурациооный файл storage-bucket.tf  
 Применить конфигурацию  
 Убедиться, что бакеты создались и доступны  
+
+
+# Homework-8 Управление конфигурацией. Основные DevOps инструменты. Знакомство с Ansible  
+
+## Установка Ansible
+
+Установить Python 2.7  
+Создать файл requirements.txt с указанием версии ansible>=2.4  
+Любым пакетным менеджером установить Ansible  
+Проверить установленную версию  
+Проверить, что на VM также установлен Python >=2.7  
+Поднять с помощью terraform созданную ранее инфраструктуру в окружении stage  
+
+## Inventory file
+
+Создать директорию ansible  
+Создать файл inventory в котором указать краткое имя сервера, ip хоста, user и путь к private_key (для инстансов app и БД)
+Проверить подключение к хосту для управления им с помощью вызова модуля ping  
+
+```ansible appserver -i ./inventory -m ping```
+
+## Параметры ansible.cfg  
+
+Создать конфиг ansible.cfg  
+Указать в нем путь до inventory и данные пользователя, что прописаны в inventory файле  
+Подчистить inventory файл, удалив избыточную информацию  
+Использовать модуль command с командой uptime для проверки работы  
+
+```ansible dbserver -m command -a uptime```
+
+Сгруппировать в inventory хосты
+
+## Использование YAML inventory  
+
+Перенести данные из inventory в файл inventory.yml, используя yml формат  
+Проверить работу, подключившись с помошью ключа -i
+
+```ansible all -m ping -i inventory.yml```
+
+## Выполнение команд и простого playbook  
+
+Выполнить команды с использованием модулей command, shell, systemd, service, git  
+Зафиксировать разницу выполнения команд  
+Написать простой playbook по копированию репозитория  reddit.
+
+`- name: Clone`
+  `hosts: app`  
+  `tasks:`  
+    `- name: Clone repo`  
+      `git:`  
+      `repo: https://github.com/express42/reddit.git`  
+      `dest: /home/appuser/reddit`
+
+Выполнить
+
+```ansible-playbook clone.yml```
+
+Удалить скаченный репозиторий и еще раз запустить команду  
+После повторного запуска видно changed=1, так как раннее команда уже выполнялась  
