@@ -335,19 +335,3 @@ https://blog.gruntwork.io/installing-multiple-versions-of-terraform-with-homebre
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-some changes to test slack
