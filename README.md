@@ -334,4 +334,4 @@ https://blog.gruntwork.io/installing-multiple-versions-of-terraform-with-homebre
 Проверить выполнение для  stage окружения  
 
 
-
+Slack
