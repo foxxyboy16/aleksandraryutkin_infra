@@ -332,3 +332,22 @@ https://blog.gruntwork.io/installing-multiple-versions-of-terraform-with-homebre
 
 Добавить вызов плейбука в файл site.yml  
 Проверить выполнение для  stage окружения  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+some changes to test slack
